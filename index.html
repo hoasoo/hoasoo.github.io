@@ -390,7 +390,7 @@
             window.addEventListener(event, function(){
                 boundEls.forEach((el, idx) => {
                     var rect = el.getBoundingClientRect();
-                    var scroll = window.screenY;
+                    var scroll = window.screenY + (window.innerHeight / 2);
                     
                     if(scroll >= rect.top && scroll < rect.bottom){
                         btnEls.forEach(el=>{
