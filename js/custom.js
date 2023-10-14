@@ -35,7 +35,7 @@ function tabFunc(){
     var tabBtns = document.querySelectorAll('[tab-btn]');
 
     tabBtns.forEach(els => {
-        var btns = els.querySelectorAll('.btn');
+        var btns = els.querySelectorAll('.btn:not([no-tab])');
         var target = document.querySelector(`[tab-target = '${els.getAttribute('tab-btn')}']`)
         var tabs = target.querySelectorAll('.tab');
 
