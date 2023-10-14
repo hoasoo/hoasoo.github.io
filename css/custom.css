@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*------------------------*/
+/* Fonts */
+/*------------------------*/
+@import url(/fonts/nanumsquareneo.css);
+
+/*------------------------*/
+/* Basic */
+/*------------------------*/
+html {scroll-behavior: smooth;}
+body {font-family: 'Roboto', 'NanumSquareNeo', sans-serif; letter-spacing: -0.05em; word-break: keep-all; color: #222; flex-shrink: 0;}
+.mx-auto {margin-left: auto !important; margin-right: auto !important;}
+.flex_wrap {display: flex;}
+.tab_cons .tab {display: none;}
+.tab_cons .tab.on {display: block;}
+
+/*------------------------*/
+/* color */
+/*------------------------*/
+:root {
+    --main-color : #c7d36f;
+    --point-color : #9eb23b;
+    --sub-color-1 : #fcf9c6;
+    --sub-color-2 : #fffeeb;
+}
+
+/*------------------------*/
+/* layout */
+/*------------------------*/
+body.scroll-off {height: 100vh; overflow: hidden;}
+.page-wrapper{display: flex; --header: 250px;}
+.page-wrapper header {width: var(--header); position: fixed; top: 0; left: 0; height: 100vh; border-right: 1px solid rgba(158, 178, 59, 0.1); z-index: 10;}
+.page-wrapper .header-bg {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);}
+.page-wrapper .header-bg.on {display: block;}
+.page-wrapper main {margin-left: auto; width: calc(100% - var(--header));}
+.section {padding: 100px 0; box-sizing: border-box;}
+.section.bgc {background-color: var(--sub-color-2);}
+.inner {width: 100%; max-width: 1200px; margin: auto; padding: 0 20px; box-sizing: border-box;}
+
+@media all and (max-width: 1024px) {
+    .page-wrapper main {width: 100%;}
+}
+
+/*------------------------*/
+/* tit */
+/*------------------------*/
+.main_tit.mb {margin-bottom: 60px;}
+.main_tit h3 {font-weight: 300; font-size: 48px;}
+.main_tit i {display: block; width: 100px; height: 2px; background-color: var(--point-color); position: relative; margin-top: 10px;}
+.main_tit i::before {content: ''; position: absolute; width: 10px; height: 10px; border-radius: 50%; background-color: var(--point-color); top: 50%; transform: translateY(-50%); right: 0;}
+
+/*------------------------*/
+/* header */
+/*------------------------*/
+header {display: flex; flex-direction: column; gap: 20px; background-color: #fff; padding: 60px 0 60px; height: 100vh; box-sizing: border-box;}
+/* profile */
+header .profile .img {width: 140px; height: 140px; border-radius: 50%; background-color: var(--sub-color-1); border: 3px solid var(--point-color); overflow: hidden;}
+header .profile .img img {width: 100%; height: 100%; object-fit: contain; object-position: center bottom;}
+/* nav depth01 */
+header nav {font-weight: 500; font-size: 16px;}
+header nav > ul > li {margin-top: 1.2em; position: relative; width: fit-content; margin-left: auto; margin-right: auto; padding: 0 20px; color: rgb(193, 197, 187); font-weight: 400;}
+header nav > ul > li.on,
+header nav > ul > li:hover {font-weight: 700; color: var(--point-color);}
+/* etc */
+header .etc {margin-top: auto; text-align: center; font-weight: 700; letter-spacing: 0.15em; font-size: 30px; color: var(--point-color);}
+/* trigger */
+header .trigger {display: none; position: absolute; align-items: center; justify-content: center; top: 0; left: 100%; width: 40px; height: 40px; border-radius: 50%; background-color: var(--point-color); transform: translate(20px, 20px); cursor: pointer;}
+header .trigger svg {width: 24px; height: 24px; fill: #fff;}
+
+@media all and (max-width: 1024px) {
+    header {transform: translateX(-100%); transition: 0.35s;}
+    header.on {transform: translateX(0);}
+    header .trigger {display: flex;}
+}
+
+/*------------------------*/
+/* con01 */
+/*------------------------*/
+.con01 {display: flex; align-items: center; height: 100vh; background-color: var(--sub-color-2);}
+.con01 .heading {font-family: 'NanumSquareNeo'; text-align: center;}
+.con01 .heading p {font-weight: 300; font-size: 28px; margin-bottom: 40px;}
+.con01 .heading h2 {font-weight: 800; font-size: 56px;color: var(--point-color);}
+.con01 .heading h2::after {content:''; display: inline-block; vertical-align: bottom; height: 1em; width: 2px; background-color: var(--point-color); margin-left: 5px; animation: blank 1s infinite;}
+.con01 .btns {text-align: center; margin-top: 100px;}
+.con01 .btns a {font-size: 16px; padding: 7px 20px; box-sizing: border-box; border-radius: 100px; color: var(--point-color); border: 2px solid var(--point-color); transition: 0.25s;}
+.con01 .btns a:hover {background-color: var(--point-color); border-color: transparent; color: #fff;}
+
+@keyframes blank {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@media all and (max-width: 767px) {
+    .con01 .heading h2 {font-size: 48px;}
+}
+/*------------------------*/
+/* con02 */
+/*------------------------*/
+.con02 .row {align-items: center; --gap: 40px; gap: var(--gap);}
+.con02 .left {width: calc(50% - var(--gap));}
+.con02 .right {width: 50%}
+/* img */
+.con02 .row .img_box {aspect-ratio: 1/1; box-sizing: border-box; background-color: var(--sub-color-2); padding: 0 30px; border-radius: 5px; border: 2px solid var(--point-color); box-shadow: 5px 5px 10px rgba(71, 124, 2, 0.2);}
+.con02 .row .img_box img {display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom;}
+/* txt */
+.con02 .row .txt_box h4 {font-weight: 800; font-size: 36px; color: var(--point-color); margin-bottom: 25px;}
+.con02 .row .txt_box p {font-size: 18px; line-height: 1.4em;}
+.con02 .row table {width: 100%; margin-top: 60px;}
+.con02 .row table th,
+.con02 .row table td {padding: 10px 0; box-sizing: border-box; line-height: 1.4em;}
+.con02 .row table th {text-align: left; font-weight: 700; color: var(--point-color); width: 5.5em;}
+.con02 .row table ul {list-style: '- '; padding-left: 0.5em; box-sizing: border-box;}
+
+@media all and (max-width: 1200px) {
+    .con02 .row {flex-wrap: wrap; justify-content: center;}
+    .con02 .left {width: 100%; max-width: 600px;} 
+    .con02 .right {width: 100%;}
+}
+/*------------------------*/
+/* con03 */
+/*------------------------*/
+.con03 ul {display: flex; flex-wrap: wrap; --gap:30px; gap: var(--gap);}
+.con03 ul li {--i: 3; width: calc((100% / var(--i)) - (var(--gap) * (var(--i) - 1) / var(--i))); background-color: #fff; border: 2px solid var(--point-color); border-radius: 5px; padding: 30px; box-sizing: border-box; transition: 0.25s;}
+.con03 ul li h5 {width: fit-content; padding: 10px 20px; box-sizing: border-box; background-color: var(--point-color); color: #fff; border-radius: 5px; font-weight: 700; font-size: 20px; text-transform: uppercase; margin-bottom: 20px; transition: 0.25s;}
+.con03 ul li p {font-size: 16px; line-height: 1.4em; transition: 0.25s;}
+/* hover */
+.con03 ul li:hover {background-color: var(--point-color)}
+.con03 ul li:hover h5 {background-color: #fff; color: var(--point-color);}
+.con03 ul li:hover p {color: #fff;}
+
+@media all and (max-width: 1200px) {
+    .con03 ul li {--i:2;}
+}
+
+@media all and (max-width: 767px) {
+    .con03 ul li {width: 100%;}
+}
+/*------------------------*/
+/* con04 */
+/*------------------------*/
+.con04 .tab_btns {display: flex; gap: 10px; margin-bottom: 40px;}
+.con04 .tab_btns .btn {border: 2px solid var(--point-color); color: var(--point-color); border-radius: 100px; padding: 7px 20px; box-sizing: border-box; transition: 0.25s;}
+.con04 .tab_btns .btn.on,
+.con04 .tab_btns .btn:hover {background-color: var(--point-color); color: #fff;}
+.con04 .box_wrap {display: flex; flex-wrap: wrap; --gap:20px; gap: var(--gap);}
+.con04 .box_wrap .box {--i: 3; width: calc((100% / var(--i)) - (var(--gap) * (var(--i) - 1) / var(--i))); cursor: pointer;}
+.con04 .box_wrap .box:hover img {object-position: bottom center;}
+.con04 .img_box {width: 100%; aspect-ratio: 1/1; aspect-ratio: 1/1; border: 2px solid var(--point-color); border-radius: 10px; overflow: hidden; }
+.con04 .img_box img {width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: 2s;}
+.con04 .info li + li {margin-top: 10px;}
+.con04 .info h5 {font-weight: 800; font-size: 20px; text-align: center; padding: 15px 0 10px; box-sizing: border-box;}
+.con04 .code_pen li + li {margin-top: 40px;}
+
+@media all and (max-width: 1024px) {
+    .con04 .box_wrap .box {--i: 2;}
+}
+
+@media all and (max-width: 640px) {
+    .con04 .box_wrap .box {width: 100%;}
+}
