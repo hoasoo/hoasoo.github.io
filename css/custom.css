@@ -29,7 +29,7 @@ body {font-family: 'Roboto', 'NanumSquareNeo', sans-serif; letter-spacing: -0.05
 /*------------------------*/
 body.scroll-off {height: 100vh; overflow: hidden;}
 .page-wrapper{display: flex; --header: 250px;}
-.page-wrapper header {width: var(--header); position: fixed; top: 0; left: 0; height: 100vh; border-right: 1px solid rgba(158, 178, 59, 0.1); z-index: 10; overflow-y: auto;}
+.page-wrapper header {width: var(--header); position: fixed; top: 0; left: 0; height: 100vh; border-right: 1px solid rgba(158, 178, 59, 0.1); z-index: 10;}
 .page-wrapper .header-bg {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);}
 .page-wrapper .header-bg.on {display: block;}
 .page-wrapper main {margin-left: auto; width: calc(100% - var(--header));}
@@ -52,7 +52,8 @@ body.scroll-off {height: 100vh; overflow: hidden;}
 /*------------------------*/
 /* header */
 /*------------------------*/
-header {display: flex; flex-direction: column; gap: 20px; background-color: #fff; padding: 60px 0 60px; height: 100vh; box-sizing: border-box;}
+header {background-color: #fff; height: 100vh; box-sizing: border-box;}
+header .header_wrap {display: flex; flex-direction: column; gap: 20px; height: 100%; overflow-y: auto; padding: 60px 0 60px; box-sizing: border-box;}
 /* profile */
 header .profile .img {width: 140px; height: 140px; border-radius: 50%; background-color: var(--sub-color-1); border: 3px solid var(--point-color); overflow: hidden;}
 header .profile .img img {width: 100%; height: 100%; object-fit: contain; object-position: center bottom;}
