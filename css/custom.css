@@ -29,7 +29,7 @@ body {font-family: 'Roboto', 'NanumSquareNeo', sans-serif; letter-spacing: -0.05
 /*------------------------*/
 body.scroll-off {height: 100vh; overflow: hidden;}
 .page-wrapper{display: flex; --header: 250px;}
-.page-wrapper header {width: var(--header); position: fixed; top: 0; left: 0; height: 100vh; border-right: 1px solid rgba(158, 178, 59, 0.1); z-index: 10;}
+.page-wrapper header {width: var(--header); position: fixed; top: 0; left: 0; height: 100vh; border-right: 1px solid rgba(158, 178, 59, 0.1); z-index: 10; overflow-y: auto;}
 .page-wrapper .header-bg {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);}
 .page-wrapper .header-bg.on {display: block;}
 .page-wrapper main {margin-left: auto; width: calc(100% - var(--header));}
@@ -57,7 +57,7 @@ header {display: flex; flex-direction: column; gap: 20px; background-color: #fff
 header .profile .img {width: 140px; height: 140px; border-radius: 50%; background-color: var(--sub-color-1); border: 3px solid var(--point-color); overflow: hidden;}
 header .profile .img img {width: 100%; height: 100%; object-fit: contain; object-position: center bottom;}
 /* nav depth01 */
-header nav {font-weight: 500; font-size: 16px;}
+header nav {font-weight: 500; font-size: 16px; margin-bottom: 60px;}
 header nav > ul > li {margin-top: 1.2em; position: relative; width: fit-content; margin-left: auto; margin-right: auto; padding: 0 20px; color: rgb(193, 197, 187); font-weight: 400;}
 header nav > ul > li.on,
 header nav > ul > li:hover {font-weight: 700; color: var(--point-color);}
