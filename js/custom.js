@@ -28,7 +28,7 @@ function dateLapse(year, month, date) {
     var month = currDate.getMonth() + 1 - base.month;
     var date = currDate.getDate() - base.date;
 
-    return `경력 ${year}년 ${month}개월 ${date}일`
+    return currDate.getDate() <= base.date ? `경력 ${year}년 ${month}개월` : `경력 ${year}년 ${month}개월 ${date}일`
 }
 
 function tabFunc(){
