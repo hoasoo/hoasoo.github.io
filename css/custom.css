@@ -142,7 +142,7 @@ header .trigger svg {width: 24px; height: 24px; fill: #fff;}
 .con04 .tab_btns .btn {border: 2px solid var(--point-color); color: var(--point-color); border-radius: 100px; padding: 7px 20px; box-sizing: border-box; transition: 0.25s;}
 .con04 .tab_btns .btn.on,
 .con04 .tab_btns .btn:hover {background-color: var(--point-color); color: #fff;}
-.con04 .box_wrap {display: flex; flex-wrap: wrap; --gap:20px; gap: var(--gap);}
+.con04 .box_wrap {display: flex; flex-wrap: wrap; --gap:20px; gap: 40px var(--gap);}
 .con04 .box_wrap .box {--i: 3; width: calc((100% / var(--i)) - (var(--gap) * (var(--i) - 1) / var(--i))); cursor: pointer;}
 .con04 .box_wrap .box:hover img {object-position: bottom center;}
 .con04 .img_box {width: 100%; aspect-ratio: 1/1; aspect-ratio: 1/1; border: 2px solid var(--point-color); border-radius: 10px; overflow: hidden; }
